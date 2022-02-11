@@ -11,15 +11,13 @@ class ManagedDependencyExtensionTest {
 
     @Test
     void extensionIsRegistered() {
-        Attributes attributes = Attributes.builder()
-                .attribute("quarkus-version", "2.7.1.Final")
-                .build();
         Asciidoctor asciidoctor = Asciidoctor.Factory.create();
         Options options = Options.builder()
-                .attributes(attributes)
-                .backend("html5")
+                .attributes(Attributes.builder()
+                        .attribute("quarkus-version","2.7.1.Final")
+                        .backend("html5").build())
                 .build();
-        String converted = asciidoctor.convert("Hello version:io.smallrye.common:smallrye-common-constraint[]", options);
-        assertThat(converted).contains("Hello 1.8.0");
+        String converted = asciidoctor.convert("This example uses SmallRye Config version:io.smallrye.config:smallrye-config[]", options);
+        assertThat(converted).contains("This example uses SmallRye Config 2.8.2");
     }
 }

@@ -17,14 +17,14 @@ public class Resolver {
 
     private final Model bom;
 
-    public static final Resolver forVersion(String version) {
+    public static final Resolver forQuarkusVersion(String version) {
         // FIXME Cache the Resolver
         return new Resolver(version);
     }
 
-    private Resolver(String version) {
+    private Resolver(String quarkusVersion) {
         // TODO Use Maven Resolver API instead
-        try (InputStream is = new URL(String.format(URL_TEMPLATE, version)).openStream();
+        try (InputStream is = new URL(String.format(URL_TEMPLATE, quarkusVersion)).openStream();
                 InputStreamReader reader = new InputStreamReader(is, StandardCharsets.UTF_8)) {
             this.bom = Maven.readModel(reader);
         } catch (IOException io) {

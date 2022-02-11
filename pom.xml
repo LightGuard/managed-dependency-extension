@@ -5,9 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.gastaldi</groupId>
-    <artifactId>bom-asciidoctor-extension</artifactId>
+    <artifactId>managed-dependency-extension</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <name>Managed Dependency AsciidoctorJ Extension</name>
+    <description>An AsciidoctorJ extension to output dependencies from a BOM</description>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>

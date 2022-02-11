@@ -17,8 +17,7 @@ public class ManagedDependencyMacro extends InlineMacroProcessor {
         String[] split = ga.split(":");
         String groupId = split[0];
         String artifactId = split[1];
-        Resolver resolver = Resolver.forVersion(quarkusVersion);
-        return resolver.findVersion(groupId, artifactId)
+        return Resolver.forQuarkusVersion(quarkusVersion).findVersion(groupId, artifactId)
                 .map(v -> createPhraseNode(parent, "quoted", v, attributes))
                 .orElse(null);
     }

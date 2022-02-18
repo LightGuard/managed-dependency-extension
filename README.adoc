@@ -1,11 +1,10 @@
-Managed Dependency Asciidoctor Extension
-=========================================
+= Managed Dependency Asciidoctor Extension
 
-This is an AsciidoctorJ extension that outputs the managed dependency version of a given groupId:artifactId, based on a BOM
+This is an Asciidoctor extension that outputs the managed dependency version of a given groupId:artifactId, based on a BOM
 
 Example: 
 
-```asciidoc
+```
 This example uses SmallRye Config version:io.smallrye.config:smallrye-config[] 
 ```
 

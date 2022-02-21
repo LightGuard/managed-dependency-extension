@@ -13,3 +13,9 @@ This will output the following if the `:quarkus-version: 2.7.1.Final` is defined
 ```
 This example uses SmallRye Config 2.8.2
 ```
+
+The macro also works if the quarkus version is supplied as an attribute to the macro itself:
+
+```
+This example uses SmallRye Config version:io.smallrye.config:smallrye-config[2.7.1.Final]
+```

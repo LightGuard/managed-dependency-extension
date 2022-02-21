@@ -9,7 +9,7 @@ when 'true'
   require 'simplecov'
 end
 
-require 'quarkus/managed-dependency/extensions'
+require 'quarkus/managed-dependency/api'
 require 'fileutils'
 require 'open3' unless defined? Open3
 require 'stringio'
@@ -51,10 +51,16 @@ RSpec.configure do |config|
     (FileUtils.mkpath (File.join __dir__, 'output'))[0]
   end
 
-  # TODO: run the version sub
-  def reduce_file input_file, opts = {}
+  def process_file input_file, opts = {}
     opts[:sourcemap] == false ? (opts.delete :sourcemap) : (opts[:sourcemap] = true)
-    Asciidoctor::Reducer.reduce_file input_file, opts
+    opts[:backend] = 'html5'
+    Quarkus::ManagedDependency.process_file input_file, opts
+  end
+
+  def process_string input, opts = {}
+    opts[:sourcemap] == false ? (opts.delete :sourcemap) : (opts[:sourcemap] = true)
+    opts[:backend] = 'html5'
+    Quarkus::ManagedDependency.process input, opts
   end
 
   def run_command cmd, *args

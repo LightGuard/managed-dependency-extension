@@ -16,10 +16,10 @@ Gem::Specification.new do |s|
   # NOTE required ruby version is informational only; it's not enforced since it can't be overridden and can cause builds to break
   #s.required_ruby_version = '>= 2.7.0'
   s.metadata = {
-    'bug_tracker_uri' => 'https://github.com/gastaldi/managed-dependency-extension/issues',
-    'changelog_uri' => 'https://github.com/gastaldi/managed-dependency-extension/blob/ruby/CHANGELOG.adoc',
+    'bug_tracker_uri' => 'https://github.com/lightguard/managed-dependency-extension/issues',
+    'changelog_uri' => 'https://github.com/lightguard/managed-dependency-extension/blob/ruby/CHANGELOG.adoc',
     'mailing_list_uri' => 'https://github.com/quarkusio/quarkus/discussions',
-    'source_code_uri' => 'https://github.com/gastaldi/managed-dependency-extension/tree/ruby'
+    'source_code_uri' => 'https://github.com/lightguard/managed-dependency-extension/tree/ruby'
   }
 
   # NOTE the logic to build the list of files is designed to produce a usable package even when the git command is not available

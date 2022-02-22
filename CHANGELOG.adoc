@@ -1,0 +1,14 @@
+= Changelog
+
+== 1.0.1
+
+
+
+== 1.0.0
+
+* ad666c6 - Initial commit and project structure
+* c0dd7ee - Starting development
+* a878a8c - Tests working
+* a41c2da - Everything appears to be working
+* d721a49 - Adding the version attribute documentation
+* 1671358 - Release version 1.0.0

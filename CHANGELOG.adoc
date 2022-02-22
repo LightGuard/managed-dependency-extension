@@ -2,7 +2,8 @@
 
 == 1.0.1
 
-
+* 31c3480 - Updating URLs in the gemspec
+* 573b176 - Updating changelog
 
 == 1.0.0
 
